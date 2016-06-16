@@ -63,6 +63,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ZBl-Io-X32" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="64a-CJ-kxJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZBl-Io-X32" secondAttribute="bottom" constant="1" id="MIT-SO-xoX"/>
@@ -96,10 +97,22 @@
                                 <include reference="MIT-SO-xoX"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="166-43-N50" appends="YES" id="ZML-6u-hyV"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Minority Report Control Center" id="bGC-WP-oUq"/>
+                    <connections>
+                        <outlet property="preCogsLabel" destination="ZBl-Io-X32" id="9YV-PS-Jue"/>
+                        <outlet property="theFutureLabel" destination="Naf-zS-xcQ" id="6Do-qq-zKd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="166-43-N50">
+                    <connections>
+                        <action selector="onDrag:" destination="BYZ-38-t0r" id="egA-Hq-Kmv"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1615.5" y="479"/>
         </scene>
